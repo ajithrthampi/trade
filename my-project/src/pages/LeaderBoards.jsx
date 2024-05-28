@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import grid from '../assets/grid.png'
+import graph from '../assets/graph.png'
+
 import { VscHome } from 'react-icons/vsc'
 import { PiLineVerticalThin } from 'react-icons/pi'
 import { LuMenu } from 'react-icons/lu'
@@ -20,6 +22,7 @@ const LeaderBoards = () => {
     const [showMenu, setShowMene] = useState(false)
     const [sliVale, setSlipValue] = useState("0%")
 
+    //navfunction
     const showSideNavbar = () => {
         setShowMene(true)
     }
@@ -103,7 +106,6 @@ const LeaderBoards = () => {
                                 </div>
                             </div>
                         </div>
-
                         <section className='bg-white border shadow-xl p-5 mt-3 rounded-xl  '>
                             <div className=' flex gap-6 justify-end items-center pb-5 be-vietnam-pro-regular'>
                                 <div className=''>
@@ -130,7 +132,6 @@ const LeaderBoards = () => {
                                                             <th scope="col" className="px-6 xl:py-5 py-5 text-start lg:text-[13px] text-[12px] font-medium text-gray-500 uppercase">Win %(Day)</th>
                                                             <th scope="col" className="px-6 xl:py-5 py-5 text-start lg:text-[13px] text-[12px] font-medium text-gray-500 uppercase">Price <span className='capitalize'>(Rs)</span></th>
                                                             <th scope="col" className="px-6 xl:py-5 py-5 text-start lg:text-[13px] text-[12px] font-medium text-gray-500 uppercase">Action</th>
-
                                                         </tr>
                                                     </thead>
                                                     <tbody className="divide-y divide-gray-200 ">
@@ -139,7 +140,9 @@ const LeaderBoards = () => {
                                                                 <tr className='be-vietnam-pro-medium'>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-[13px] text-gray-800">{item.rank}</td>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-[13px] text-gray-800">{item.name}</td>
-                                                                    <td className="px-6 py-4 whitespace-nowrap text-[13px] text-gray-800">{item.calmer_ration}</td>
+                                                                    <td className="px-6 py-4 whitespace-nowrap text-[13px] text-gray-800 flex gap-1 items-center">
+                                                                        <img className='w-5' src={graph} alt="" />
+                                                                        {item.calmer_ration}</td>
                                                                     <td className="px-6 py-4 whitespace-nowrap text-[13px] text-gray-800">{item.over_all}</td>
 
                                                                     <td className="px-6 py-4 whitespace-nowrap text-[13px] text-gray-800">{item.avg_daily_profit}</td>
